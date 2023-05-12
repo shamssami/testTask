@@ -15,7 +15,7 @@ class Test_002_API:
         print(response.content)
         assert response.status_code == 200
 
-
+# Test get all users API
     def test_get_users(self):
         url = "https://reqres.in/api/users?page=2"
         response = requests.get(url)
