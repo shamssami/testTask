@@ -16,7 +16,7 @@ def test_setup():
 def pytest_configure(config):
     config._metadata['Project Name'] = 'UI Automation'
     config._metadata['Module Name'] = 'Customers'
-    config._metadata['Tester'] = 'Pavan'
+    config._metadata['Tester'] = 'Shams'
 
 # It is hook for delete/Modify Environment info to HTML Report
 @pytest.mark.optionalhook

@@ -1,0 +1,35 @@
+name: Run Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11.3'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium
+        pip install pytest
+        pip install pytest-html
+        pip install requests
+        pip install jsonpath
+        
+
+    - name: Install ChromeDriver
+      run: |
+        choco install chromedriver -y
+        echo 'export PATH="C:\\\\:$PATH"' >> $GITHUB_ENV
+
+    - name: Run tests
+      run: |
+        pytest -v --html=PytestReports\search_report.html testcases\test_searchflight.py  

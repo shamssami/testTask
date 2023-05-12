@@ -5,7 +5,7 @@ from PageObjects.SearchFlight import SearchFlight
 import time
 from Utilities.customeLogger import LogGen
 
-class Test_1_Search_Flight:
+class Test_001_Search:
     logger = LogGen.loggen()  # Logger
 
     def test_homePageTitle(self, test_setup):
@@ -53,7 +53,7 @@ class Test_1_Search_Flight:
 
 
 
-    def test_searchflight_missing_required_field(self,test_setup):
+    def test_searchflight_invalid(self,test_setup):
         self.logger.info("******* Starting Test_13_Search_Flight Test Without Filling Required Field **********")
 
         self.driver = test_setup

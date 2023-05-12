@@ -1,6 +1,4 @@
 from operator import itemgetter
-
-
 class TestData:
     baseURL = "https://www.aircanada.com/ca/en/aco/home.html"
     text = "Selenium Test"
@@ -9,11 +7,9 @@ class TestData:
     startDate = "13/05/2023"
     endDate = "1/06/2023"
 
-
     @staticmethod
     def getApplicationURL():
         return TestData.baseURL
-
 
     @staticmethod
     def getSource():
@@ -30,6 +26,7 @@ class TestData:
     @staticmethod
     def getEndDate():
         return TestData.endDate
+
 class API_links:
     get_users_api = "https://reqres.in/api/users/"
 
